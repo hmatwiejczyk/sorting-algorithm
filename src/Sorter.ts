@@ -1,10 +1,10 @@
-interface ISorter {
+export interface ICollections{
   length: number;
   compare(leftIndex: number, rightIndex: number) : boolean;
   swap(leftIndex: number, rightIndex: number) : void;
 }
 export class Sorter {
-  constructor(public collection: ISorter) {}
+  constructor(public collection: ICollections) {}
 
   sort(): void {
     let { length } = this.collection;

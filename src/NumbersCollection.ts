@@ -1,4 +1,5 @@
-export class NumbersCollection {
+import { ICollections } from "./Sorter";
+export class NumbersCollection implements ICollections {
   
   constructor(public data: number[]) {}
 
