@@ -1,7 +1,8 @@
-import { ICollections } from "./Sorter";
-export class NumbersCollection implements ICollections {
-  
-  constructor(public data: number[]) {}
+import { ICollections, Sorter } from './Sorter';
+export class NumbersCollection extends Sorter implements ICollections {
+  constructor(public data: number[]) {
+    super();
+  }
 
   get length(): number {
     return this.data.length;

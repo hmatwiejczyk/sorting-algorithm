@@ -1,25 +1,20 @@
-import {Sorter} from './Sorter';
-import { NumbersCollection } from "./NumbersCollection";
-import { CharactersCollection } from "./CharactersCollection";
+import { NumbersCollection } from './NumbersCollection';
+import { CharactersCollection } from './CharactersCollection';
 import { LinkedList } from './LinkedList';
 
 // example
-const numbersCollection = new NumbersCollection([1, 0, -22, 5, -2])
-const sortedNumbers = new Sorter(numbersCollection);
-sortedNumbers.sort();
+const numbersCollection = new NumbersCollection([12, -4, 2, 0, -2]);
+numbersCollection.sort();
+console.log(numbersCollection);
 
 const charactersCollection = new CharactersCollection('Hubert');
-const sortedCharacters = new Sorter(charactersCollection);
-sortedCharacters.sort();
+charactersCollection.sort();
+console.log(charactersCollection);
 
 const linkedList = new LinkedList();
-linkedList.add(44);
-linkedList.add(-10);
+linkedList.add(300);
+linkedList.add(-4);
+linkedList.add(5);
 linkedList.add(0);
-linkedList.add(33);
-const sortedLinkedList = new Sorter(linkedList);
-sortedLinkedList.sort();
-
-console.log(numbersCollection.data);
-console.log(charactersCollection.data);
+linkedList.sort();
 linkedList.print();

@@ -1,11 +1,11 @@
-import { ICollections } from './Sorter';
+import { ICollections, Sorter } from './Sorter';
 
 class Node {
   next: Node | null = null;
   constructor(public data: number) {}
 }
 
-export class LinkedList implements ICollections {
+export class LinkedList extends Sorter implements ICollections {
   head: Node | null = null;
 
   add(data: number): void {
